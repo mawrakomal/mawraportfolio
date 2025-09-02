@@ -308,40 +308,45 @@
             margin: 3rem 0;
         }
 
-        .posts-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-            height: 450px;
-            margin: 5px;
-            margin-left: 80px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+      .posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    height: 450px;
 
-        .post-box {
-            background: rgba(255, 255, 255, 0.9);
-            height: 450px;
-            width: 300px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.1);
-        }
+    /* Remove margins */
+    margin: 5px; 
 
-        .portfolio-box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
-            border-color: #ff69b4;
-        }
+    /* Center the grid */
+    justify-content: center; /* centers the whole grid horizontally */
+    align-items: center;     /* centers items vertically in the row */
+    justify-items: center;   /* centers each grid item horizontally within its cell */
+    text-align: center;
+}
 
-        .post-box img {
-            width: 300px;
-            height: 450px;
-            object-fit: contain;
-            border-radius: 1rem;
-            transition: transform 0.3s ease;
-        }
+.post-box {
+    background: rgba(255, 255, 255, 0.9);
+    height: 450px;
+    width: 300px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.1);
+}
+
+.post-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+    border-color: #ff69b4;
+}
+
+.post-box img {
+    width: 300px;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
 
         .post-box:hover img {
             transform: scale(1.1);
