@@ -8,7 +8,8 @@
     <title>Mawra Komal-Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <style>
         * {
@@ -39,7 +40,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 10% 20%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(255, 192, 203, 0.4) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(255, 228, 225, 0.3) 0%, transparent 50%);
@@ -78,12 +79,15 @@
                 transform: translateY(-100vh) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.7;
             }
+
             90% {
                 opacity: 0.7;
             }
+
             100% {
                 transform: translateY(100vh) rotate(360deg);
                 opacity: 0;
@@ -243,8 +247,13 @@
         }
 
         @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .home-img img {
@@ -301,9 +310,41 @@
 
         .posts-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2.5rem;
-            margin: 3rem 0;
+            height: 450px;
+            margin: 5px;
+            margin-left: 80px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .post-box {
+            background: rgba(255, 255, 255, 0.9);
+            height: 450px;
+            width: 300px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.1);
+        }
+
+        .portfolio-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+            border-color: #ff69b4;
+        }
+
+        .post-box img {
+            width: 300px;
+            height: 450px;
+            object-fit: contain;
+            border-radius: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .post-box:hover img {
+            transform: scale(1.1);
         }
 
         .portfolio-box {
@@ -540,11 +581,11 @@
             .header {
                 padding: 2rem 3%;
             }
-            
+
             section {
                 padding: 10rem 3% 2rem;
             }
-            
+
             .home {
                 flex-direction: column;
                 gap: 4rem;
@@ -560,7 +601,7 @@
             #menu-icon {
                 display: block;
             }
-            
+
             .navbar {
                 position: absolute;
                 top: 100%;
@@ -571,11 +612,11 @@
                 backdrop-filter: blur(10px);
                 display: none;
             }
-            
+
             .navbar.active {
                 display: block;
             }
-            
+
             .navbar a {
                 display: block;
                 font-size: 2rem;
@@ -596,11 +637,11 @@
             .home-content h2 {
                 font-size: 4rem;
             }
-            
+
             .input-box {
                 flex-direction: column;
             }
-            
+
             .portfolio-container {
                 grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
             }
@@ -630,6 +671,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -663,7 +705,9 @@
     </div>
 
     <header class="header">
-        <a href="#home" class="logo"><div class="logo"> Mawra Komal</div></a>
+        <a href="#home" class="logo">
+            <div class="logo"> Mawra Komal</div>
+        </a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -752,7 +796,7 @@
             </div>
 
             <br><br><br><br><br><br>
-            
+
             <div>
                 <h2 class="about-heading"> <span class="about-span">Tools</span></h2><br>
             </div>
@@ -807,105 +851,121 @@
             </div>
             <div class="portfolio-container">
                 <div class="portfolio-box">
-                     <a href="assets/images/certs/AI Powered Marketer.png" target="_blank"><img src="assets/images/certs/logos/AI-Powered.png" alt=""></a>
+                    <a href="assets/images/certs/AI Powered Marketer.png" target="_blank"><img
+                            src="assets/images/certs/logos/AI-Powered.png" alt=""></a>
                 </div>
                 <div class="portfolio-box">
-                    <a href="assets/images/certs/Content Marketing Certificate.png" target="_blank"><img src="assets/images/certs/logos/content-marketing.png" alt=""></a>
-               </div>
-               <div class="portfolio-box">
-                <a href="assets/images/certs/Digital Marketing Certificate.png" target="_blank"><img src="assets/images/certs/logos/digital-marketing.avif" alt=""></a>
-           </div>
+                    <a href="assets/images/certs/Content Marketing Certificate.png" target="_blank"><img
+                            src="assets/images/certs/logos/content-marketing.png" alt=""></a>
+                </div>
+                <div class="portfolio-box">
+                    <a href="assets/images/certs/Digital Marketing Certificate.png" target="_blank"><img
+                            src="assets/images/certs/logos/digital-marketing.avif" alt=""></a>
+                </div>
             </div>
             <div class="portfolio-container">
                 <div class="portfolio-box">
-                    <a href="assets/images/certs/Google Ads.png" target="_blank"><img src="assets/images/certs/logos/google-ads.jpg" alt=""></a>
-               </div>
-               <div class="portfolio-box">
-                <a href="assets/images/certs/Inbound Marketing Certificate.png" target="_blank"><img src="assets/images/certs/logos/inbound-marketing.jpg" alt=""></a>
-           </div>
-           <div class="portfolio-box">
-            <a href="assets/images/certs/MICRO 1 Certification.jpg" target="_blank"><img src="assets/images/certs/logos/micro1.png" alt=""></a>
-       </div>
+                    <a href="assets/images/certs/Google Ads.png" target="_blank"><img
+                            src="assets/images/certs/logos/google-ads.jpg" alt=""></a>
+                </div>
+                <div class="portfolio-box">
+                    <a href="assets/images/certs/Inbound Marketing Certificate.png" target="_blank"><img
+                            src="assets/images/certs/logos/inbound-marketing.jpg" alt=""></a>
+                </div>
+                <div class="portfolio-box">
+                    <a href="assets/images/certs/MICRO 1 Certification.jpg" target="_blank"><img
+                            src="assets/images/certs/logos/micro1.png" alt=""></a>
+                </div>
             </div>
 
             <div class="portfolio-container">
                 <div class="portfolio-box">
-                    <a href="assets/images/certs/Seo Fundamentals.png" target="_blank"><img src="assets/images/certs/logos/SEO-Fundamentals.jpg" alt=""></a>
-               </div>
-               <div class="portfolio-box">
-                <a href="assets/images/certs/Seo_strategy.png" target="_blank"><img src="assets/images/certs/logos/SEO-strategy.png" alt=""></a>
-           </div>
-           <div class="portfolio-box">
-            <a href="assets/images/certs/Social Media Certificate.png" target="_blank"><img src="assets/images/certs/logos/inbound-marketing-social-media.jpg" alt=""></a>
-       </div>
+                    <a href="assets/images/certs/Seo Fundamentals.png" target="_blank"><img
+                            src="assets/images/certs/logos/SEO-Fundamentals.jpg" alt=""></a>
+                </div>
+                <div class="portfolio-box">
+                    <a href="assets/images/certs/Seo_strategy.png" target="_blank"><img
+                            src="assets/images/certs/logos/SEO-strategy.png" alt=""></a>
+                </div>
+                <div class="portfolio-box">
+                    <a href="assets/images/certs/Social Media Certificate.png" target="_blank"><img
+                            src="assets/images/certs/logos/inbound-marketing-social-media.jpg" alt=""></a>
+                </div>
             </div>
 
             <br><br><br><br><br><br>
-            
+
             <div>
                 <h2 class="about-heading"> <span class="about-span">Posts</span></h2><br>
             </div>
             <div class="posts-container">
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/1 - 1080_1080.jpg" alt="">
                 </div>
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/2 - 1080_1080.jpg" alt="">
                 </div>
-                <div class="portfolio-box">
+
+                <div class="post-box">
                     <img src="assets/images/posts/Free boiler - Done.jpg" alt="">
                 </div>
-                <div class="portfolio-box">
+            </div>
+
+            <div class="posts-container">
+                <div class="post-box">
                     <img src="assets/images/posts/IWI square - ali-1.jpg" alt="">
                 </div>
-            </div>
-            <div class="posts-container">
-                <div class="portfolio-box">
+
+                <div class="post-box">
                     <img src="assets/images/posts/IWI square - ali.jpg" alt="">
                 </div>
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/IWI square.jpg" alt="">
-                </div>
-                <div class="portfolio-box">
-                    <img src="assets/images/posts/IWI square.png" alt="">
-                </div>
-                <div class="portfolio-box">
-                    <img src="assets/images/posts/Instagram post - 8.jpg" alt="">
                 </div>
             </div>
             <div class="posts-container">
-                <div class="portfolio-box">
+                <div class="post-box">
+                    <img src="assets/images/posts/IWI square.png" alt="">
+                </div>
+                <div class="post-box">
+                    <img src="assets/images/posts/Instagram post - 8.jpg" alt="">
+                </div>
+
+                <div class="post-box">
                     <img src="assets/images/posts/LO - 2.jpg" alt="">
                 </div>
-                <div class="portfolio-box">
+            </div>
+
+            <div class="posts-container">
+                <div class="post-box">
                     <img src="assets/images/posts/LO 7.png" alt="">
                 </div>
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/LO 8.png" alt="">
                 </div>
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/LO 11.png" alt="">
                 </div>
             </div>
             <div class="posts-container">
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/LO 12.png" alt="">
                 </div>
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/Post pending 5.jpg" alt="">
                 </div>
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/Square - ali.jpg" alt="">
-                </div>
-                <div class="portfolio-box">
-                    <img src="assets/images/posts/Square.jpg" alt="">
                 </div>
             </div>
             <div class="posts-container">
-                <div class="portfolio-box">
+                <div class="post-box">
+                    <img src="assets/images/posts/Square.jpg" alt="">
+                </div>
+                <div class="post-box">
                     <img src="assets/images/posts/Untitled.png" alt="">
                 </div>
-                <div class="portfolio-box">
+                <div class="post-box">
                     <img src="assets/images/posts/Untitled2.png" alt="">
                 </div>
             </div>
@@ -941,13 +1001,15 @@
             <h2 class="heading">Send Your <span class="about-content-span">Queries</span></h2>
             <div class="input-box">
                 <input class="input-field" type="text" id="fname" name="from_name" placeholder="Full Name" required>
-                <input class="input-field" type="email" id="email" name="from_email" placeholder="Email Address" required>
+                <input class="input-field" type="email" id="email" name="from_email" placeholder="Email Address"
+                    required>
             </div>
             <div class="input-box">
                 <input class="input-field" type="tel" id="contact" name="contact" placeholder="Mobile Number" required>
                 <input class="input-field" type="text" id="subject" name="subject" placeholder="Email Subject" required>
             </div>
-            <textarea class="input-field" name="message" id="msg" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea class="input-field" name="message" id="msg" cols="30" rows="10" placeholder="Your Message"
+                required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
         <div class="alert" id="alert-message"></div>
@@ -955,7 +1017,9 @@
 
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; <span id="year" class="footer-span"></span> by <a href="https://pk.linkedin.com/in/aashan-shehzad-7b659a276">Aashan Shehzad</a> | All Rights Reserved.</p>
+            <p>Copyright &copy; <span id="year" class="footer-span"></span> by <a
+                    href="https://pk.linkedin.com/in/aashan-shehzad-7b659a276">Aashan Shehzad</a> | All Rights Reserved.
+            </p>
         </div>
         <div class="footer-iconTop">
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
@@ -1101,9 +1165,10 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.portfolio-box, .services-box').forEach(el => {
+        document.querySelectorAll('.portfolio-box,.post-box .services-box').forEach(el => {
             observer.observe(el);
         });
     </script>
 </body>
+
 </html>
