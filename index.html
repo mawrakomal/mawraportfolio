@@ -293,6 +293,54 @@
             font-weight: 400;
         }
 
+        /* --- New Styles for Why Choose Me --- */
+        .why-me-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
+        }
+
+        .why-me-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .why-me-box:hover {
+            transform: translateY(-5px);
+            border-color: #ff69b4;
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.15);
+        }
+
+        .why-me-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #c2185b;
+            margin-bottom: 1rem;
+        }
+
+        .why-me-desc {
+            font-size: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .quote-box {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            color: #2d1b2e;
+            font-style: italic;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            padding: 1rem;
+        }
+
         .about-heading {
             font-size: 3.5rem;
             font-weight: 600;
@@ -308,45 +356,40 @@
             margin: 3rem 0;
         }
 
-      .posts-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    height: 450px;
+        .posts-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            height: 450px;
+            margin: 5px;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+        }
 
-    /* Remove margins */
-    margin: 5px; 
+        .post-box {
+            background: rgba(255, 255, 255, 0.9);
+            height: 450px;
+            width: 300px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.1);
+        }
 
-    /* Center the grid */
-    justify-content: center; /* centers the whole grid horizontally */
-    align-items: center;     /* centers items vertically in the row */
-    justify-items: center;   /* centers each grid item horizontally within its cell */
-    text-align: center;
-}
+        .post-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+            border-color: #ff69b4;
+        }
 
-.post-box {
-    background: rgba(255, 255, 255, 0.9);
-    height: 450px;
-    width: 300px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.1);
-}
-
-.post-box:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
-    border-color: #ff69b4;
-}
-
-.post-box img {
-    width: 300px;
-    height: 450px;
-    object-fit: contain;
-    border-radius: 1rem;
-    transition: transform 0.3s ease;
-}
-
+        .post-box img {
+            width: 300px;
+            height: 450px;
+            object-fit: contain;
+            border-radius: 1rem;
+            transition: transform 0.3s ease;
+        }
 
         .post-box:hover img {
             transform: scale(1.1);
@@ -385,6 +428,58 @@
 
         .portfolio-box:hover img {
             transform: scale(1.1);
+        }
+
+        /* --- Impact Section Styles --- */
+        .impact {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .impact-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .impact-box {
+            flex: 1 1 40rem;
+            max-width: 60rem;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+            border: 3px solid rgba(255, 182, 193, 0.4);
+            transition: 0.3s ease;
+        }
+
+        .impact-box:hover {
+            transform: scale(1.02);
+            border-color: #c2185b;
+        }
+
+        .impact-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .remarkable-line {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #c2185b;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .services {
@@ -636,6 +731,11 @@
             .posts-container {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .impact-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         @media (max-width: 617px) {
@@ -704,7 +804,6 @@
 </head>
 
 <body>
-    <!-- Scroll Progress Indicator -->
     <div class="scroll-indicator">
         <div class="scroll-progress" id="scroll-progress"></div>
     </div>
@@ -717,6 +816,8 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
+            <a href="#posts">Posts</a>
+            <a href="#impact">Impact</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -752,6 +853,34 @@
                 advanced digital marketing strategies and optimization techniques.
             </h4><br>
 
+            <div>
+                <h2 class="about-heading"> <span class="about-span">Why Choose Me</span></h2>
+            </div>
+            <div class="why-me-container">
+                <div class="why-me-box">
+                    <div class="why-me-title">Strategy-Led Content</div>
+                    <div class="why-me-desc">With 6+ years of experience, I create content rooted in research, storytelling, and performance marketing — built to support real business goals.</div>
+                </div>
+                <div class="why-me-box">
+                    <div class="why-me-title">Proven Impact</div>
+                    <div class="why-me-desc">I’ve driven <strong>30% website traffic growth</strong> and <strong>20% higher engagement</strong> through structured content strategies and data-driven execution.</div>
+                </div>
+                <div class="why-me-box">
+                    <div class="why-me-title">Global Experience</div>
+                    <div class="why-me-desc">Trusted by international clients like <strong>Andromeda, Berks Insulation (UK), Networkwise, and XAD Technologies</strong>, and local businesses.</div>
+                </div>
+                <div class="why-me-box">
+                    <div class="why-me-title">End-to-End Ownership</div>
+                    <div class="why-me-desc">From research and scripting to publishing, QA, and performance analysis — I manage the full content lifecycle with clarity and consistency.</div>
+                </div>
+                <div class="why-me-box">
+                    <div class="why-me-title">Clear Storytelling</div>
+                    <div class="why-me-desc">I specialize in turning technical and research-heavy information into engaging, easy-to-understand content that connects with the right audience.</div>
+                </div>
+                <div class="quote-box">
+                    "I don’t just create content — I build strategies that grow brands."
+                </div>
+            </div>
             <div>
                 <h2 class="about-heading"> <span class="about-span">Specializations</span></h2><br>
             </div>
@@ -897,12 +1026,9 @@
                             src="assets/images/certs/logos/inbound-marketing-social-media.jpg" alt=""></a>
                 </div>
             </div>
-
-            <br><br><br><br><br><br>
-
-            <div>
+</section>
+            <section class="posts" id="posts">
                 <h2 class="about-heading"> <span class="about-span">Posts</span></h2><br>
-            </div>
             <div class="posts-container">
                 <div class="post-box">
                     <img src="assets/images/posts/1 - 1080_1080.jpg" alt="">
@@ -973,6 +1099,21 @@
                 <div class="post-box">
                     <img src="assets/images/posts/Untitled2.png" alt="">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact" id="impact">
+        <h2 class="heading">My <span class="about-content-span">Impact</span></h2>
+        
+        <p class="remarkable-line">Achieved incredible growth and enhanced company visibility, delivering measurable success for company social media presence in just a few short months.</p>
+
+        <div class="impact-container">
+            <div class="impact-box">
+                <img src="assets/images/stats1.jpg" alt="Impact Statistics 1">
+            </div>
+            <div class="impact-box">
+                <img src="assets/images/stats2.jpg" alt="Impact Statistics 2">
             </div>
         </div>
     </section>
@@ -1170,7 +1311,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.portfolio-box,.post-box .services-box').forEach(el => {
+        document.querySelectorAll('.portfolio-box,.post-box .services-box, .why-me-box, .impact-box').forEach(el => {
             observer.observe(el);
         });
     </script>
